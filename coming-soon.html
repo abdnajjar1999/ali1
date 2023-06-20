@@ -49,80 +49,87 @@
 
         <!-- COMING-SOON PAGE
         ================================================== -->
-        <section class="p-0 bg-img cover-background secondary-overlay" data-overlay-dark="9" data-background="img/bg/coming-soon.jpg">
-            <div class="container d-flex flex-column position-relative z-index-9">
-                <div class="row align-items-center min-vh-100 text-center justify-content-center">
-                    <div class="col-xl-8 wow fadeInUp" data-wow-delay="400ms">
-                        <div class="my-1-6">
-                            <div class="mb-1-9 mb-md-2-5">
-                                <h1 class="text-white">We are coming soon</h1>
-                                <p class="lead font-weight-400 mb-0 text-white">Stay tuned, we are launching very soon...</p>
-                            </div>
-                            <ul class="countdown mb-1-9 mb-md-2-5 p-0">
-                                <!-- days -->
-                                <li class="text-white"><span class="days">00</span>
-                                    <p class="timeRefDays text-center">days</p>
-                                </li>
-                                <!-- end days -->
-                                <!-- hours -->
-                                <li class="text-white"><span class="hours">00</span>
-                                    <p class="timeRefHours">hours</p>
-                                </li>
-                                <!-- end hours -->
-                                <!-- minutes -->
-                                <li class="text-white"><span class="minutes">00</span>
-                                    <p class="timeRefMinutes">minutes</p>
-                                </li>
-                                <!-- end minutes -->
-                                <!-- seconds -->
-                                <li class="text-white"><span class="seconds">00</span>
-                                    <p class="timeRefSeconds">seconds</p>
-                                </li>
-                                <!-- end seconds -->
-                            </ul>
-                            <form class="quform newsletter-form w-95 w-sm-80 w-md-60 w-lg-50 w-xl-70 mx-auto mb-1-9" action="quform/newsletter-two.php" method="post" enctype="multipart/form-data" onclick="">
+        <div class="d-flex align-items-center position-relative min-vh-100 bg-dark">
 
-                                <div class="quform-elements">
-                                    <div class="row">
+            <div class="col-lg-5 col-xl-6 d-none d-lg-flex align-items-center h-100vh px-0 bg-img cover-background" data-background="img/bg/bg-02.jpg">
 
-                                        <!-- Begin Text input element -->
-                                        <div class="col-md-12">
-                                            <div class="quform-element mb-0">
-                                                <div class="quform-input">
-                                                    <input class="form-control" id="email_address" type="text" name="email_address" placeholder="Subscribe with us" />
-                                                </div>
+            </div>
+
+            <div class="container">
+                <div class="row justify-content-center justify-content-lg-start wow fadeIn" data-wow-delay="200ms">
+                    <div class="col-md-8 col-lg-10 col-xxl-8 offset-lg-1 offset-xxl-2 my-5 text-center">
+
+                        <h2 class="text-white h3 font-weight-500 mb-1-6 mb-md-1-9 text-center">We are coming soon!</h2>
+                        <ul class="countdown text-center mb-1-9 mb-md-2-9 mt-n2">
+                            <!-- start days -->
+                            <li class="mt-2"><span class="days">00</span>
+                                <p class="timeRefDays text-center">days</p>
+                            </li>
+                            <!-- end days -->
+                            <!-- start hours -->
+                            <li class="mt-2"><span class="hours">00</span>
+                                <p class="timeRefHours">hours</p>
+                            </li>
+                            <!-- end hours -->
+                            <!-- start minutes -->
+                            <li class="mt-2"><span class="minutes">00</span>
+                                <p class="timeRefMinutes">minutes</p>
+                            </li>
+                            <!-- end minutes -->
+                            <!-- start seconds -->
+                            <li class="mt-2"><span class="seconds">00</span>
+                                <p class="timeRefSeconds">seconds</p>
+                            </li>
+                            <!-- end seconds -->
+                        </ul>
+                        <p class="lead mb-1-6 mb-md-1-9 text-white opacity7">Our webiste is coming soon!</p>
+                        <form class="quform newsletter-form w-90 mx-auto mb-3" action="quform/newsletter-two.php" method="post" enctype="multipart/form-data" onclick="">
+
+                            <div class="quform-elements">
+
+                                <div class="row">
+
+                                    <!-- Begin Text input element -->
+                                    <div class="col-md-12">
+                                        <div class="quform-element">
+                                            <div class="quform-input">
+                                                <input class="form-control" id="email_address" type="text" name="email_address" placeholder="Subscribe with us" />
                                             </div>
                                         </div>
-                                        <!-- End Text input element -->
-
-                                        <!-- Begin Submit button -->
-                                        <div class="col-md-12">
-                                            <div class="quform-submit-inner">
-                                                <button class="btn btn-white text-white m-0" type="submit"><i class="fas fa-paper-plane"></i></button>
-                                            </div>
-                                            <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
-                                        </div>
-                                        <!-- End Submit button -->
                                     </div>
+                                    <!-- End Text input element -->
+
+                                    <!-- Begin Submit button -->
+                                    <div class="col-md-12">
+                                        <div class="quform-submit-inner">
+                                            <button class="btn btn-white text-white m-0" type="submit"><i class="fas fa-paper-plane"></i></button>
+                                        </div>
+                                        <div class="quform-loading-wrap"><span class="quform-loading"></span></div>
+                                    </div>
+                                    <!-- End Submit button -->
 
                                 </div>
 
-                            </form>
-                            <div>
-                                <ul class="social-icon-style2 mb-0 ps-0">
-                                    <li><a href="#!"><i class="ti-facebook"></i></a></li>
-                                    <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
-                                    <li><a href="#!"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#!"><i class="ti-linkedin"></i></a></li>
-                                    <li><a href="#!"><i class="ti-dribbble"></i></a></li>
-                                </ul>
                             </div>
+
+                        </form>
+                        <div>
+                            <ul class="social-icon-style2 mb-0 ps-0">
+                                <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                                <li><a href="#!"><i class="ti-linkedin"></i></a></li>
+                                <li><a href="#!"><i class="ti-dribbble"></i></a></li>
+                            </ul>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </section>
 
+            <img src="img/bg/bg-shape9.png" class="position-absolute bottom-0 opacity1 end-0" alt="...">
+
+        </div>
     </div>
 
     <!-- SCROLL TO TOP

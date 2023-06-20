@@ -126,6 +126,88 @@
     }
 }
 
+/* card-style-10 */
+.card-style-10 {
+    position: relative;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);}
+  .card-style-10 .card-price {
+    background-color: #001736;
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+    width: 100px;
+    color: #fff;
+    height: 100px;
+    box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .card-style-10 .price-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: tb-rl;
+    background: #fe7c00;
+    padding: 15px 5px;
+    color: #fff; }
+  .card-style-10 .pricing-shape1 {
+    position: absolute;
+    top: -10px;
+    left: 38px;
+    width: 1px;
+    height: 50px;
+    background-color: #fe7c00;
+    transform: rotate(45deg); }
+  .card-style-10 .pricing-shape2 {
+    position: absolute;
+    top: -19px;
+    left: 47px;
+    width: 1px;
+    height: 91px;
+    background-color: #fe7c00;
+    transform: rotate(45deg); }
+    .card-style-10:hover {
+    -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #e74860;}
+
+.card-style-10 {
+  transition: all 1000ms ease 300ms;
+}
+.card-style-10:hover{
+  transform: perspective(1200px) rotateX(0deg) translateY(-10px);
+}
+
+.card-style-10  .pricing-top{
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    padding: 10px 23px 11px 23px;
+    background-color: #18455d;
+    border-radius: 0px 30px 30px 0px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: absolute;
+    color: #fff;
+    z-index: 1;
+    line-height: 1;
+}
+
+
+.pricing-bg:before {
+  content: '';
+  height: 470px;
+  width: 100%;
+  background-color: #f8f9fa;
+  position: absolute;
+  left: 0;
+  top: 0; }
 
 /*about-style-05*/
 .about-us-section .about-image {
@@ -1020,4 +1102,211 @@
     pointer-events: none;
     -webkit-transition: all 400ms linear;
     transition: all 400ms linear;
+}
+
+
+
+.contacts-icon img{
+    padding: 16px;
+}
+
+.contact-us{
+    padding: 60px;
+    background-color: #f6f6f6;
+}
+
+.contact-details {
+    padding: 30px 50px 40px;
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: #18455d;
+}
+
+.cntc-info-title:before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #cd0d14;
+    top: 18px;
+    left: 12px;
+}
+
+.contact-infor {
+    border-bottom: 1px solid rgba(255,255,255,0.12156862745098039);
+    padding: 0 0 25px;
+    margin-bottom: 22px;
+}
+
+.contacts-icon {
+    float: left;
+    margin-right: 20px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    background-color: rgba(255,255,255,0.5196078431372549);
+    text-align: center;
+    display: inline-block;
+    transition: .5s;
+
+}
+
+.contacts-icon i {
+    color: #fff;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.contacts-title h6 {
+    font-size: 14px;
+    line-height: 23px;
+    opacity: .702;
+    margin-top: 5px;
+}
+
+.contact-infor:hover .contacts-icon  {
+    transform: rotateY(180deg);
+    background: #cd0d14; 
+}
+
+.contact-infor.upper2 {
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+
+.contact-details .follow-company-icon2 a {
+    font-size: 14px;
+    display: inline-block;
+    color: #fff;
+    margin-right: 7px;
+    transition: .5s;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.follow-company-icon2 a:hover {
+    background: #cd0d14;
+}
+
+
+/*service-sidebar*/
+.sidebar .cetegory li a {
+    background-color: #fff;
+    padding: 15px 20px 15px 30px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar .cetegory li:hover a {
+    background-color: #18455d;
+    color: #fff;
+}
+
+
+.sidebar .widget {
+    margin-bottom: 30px;
+    padding: 30px 25px;
+    border-radius: 10px;
+}
+.sidebar .widget .widget-brochure {
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar .widget .widget-brochure li {
+    position: relative;
+    margin-bottom: 12px;
+    display: inline-block;
+    border: 1px solid #ededed;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.sidebar .widget .widget-brochure li a {
+    position: relative;
+    display: block;
+    padding: 16px 15px 16px 75px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.sidebar .widget .widget-brochure li a i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    line-height: 3;
+    text-align: center;
+    font-size: 20px;
+    background:#18455d;
+    color: #ffffff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.sidebar .banner-wrapper .icon-boxs {
+  position: absolute;
+  top: -43px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  }
+  .sidebar .banner-wrapper .icon-boxs i {
+    line-height: 80px; }
+
+@media screen and (max-width: 767px) {
+  .sidebar .widget {
+    padding: 25px 20px; } }
+
+
+/*portfolio-style02*/
+.portfolio-style02 .portfolio-content {
+    position: absolute;
+    bottom: 46px;
+    left: 46px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .4s cubic-bezier(0,0,.3642,1);
+}
+.portfolio-style02:hover .portfolio-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-style02 .portfolio-content .port-text {
+    background-color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+}    
+
+.portfolio-style02:hover .portfolio-icon {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.portfolio-style02 .portfolio-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    border-radius: 50%;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    transform: translateY(-20px) scale(1);
+    opacity: 0;
+    transition: .4s cubic-bezier(0,0,.3642,1);
 }
