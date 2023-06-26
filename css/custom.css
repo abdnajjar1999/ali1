@@ -209,15 +209,6 @@
 }
 
 
-.pricing-bg:before {
-  content: '';
-  height: 470px;
-  width: 100%;
-  background-color: #f8f9fa;
-  position: absolute;
-  left: 0;
-  top: 0; }
-
 /*about-style-05*/
 .about-us-section .about-image {
     position: relative;
@@ -618,42 +609,6 @@
     text-stroke: 2px #CBD1C8;
 }
 
-
-/*blog-style-02*/
-.card-style-05 .card-body {
-    position: relative;
-    margin-top: -65px;
-    margin-left: 30px;
-    padding: 30px 40px 35px;
-    background-color: #fff;
-    border-radius: 10px 0 10px 10px;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-}
-
-.card-style-05 {
-  overflow: hidden;
-  box-shadow: 0 0 70px rgba(0, 0, 0, 0.08);
-  border: none; }
-  .card-style-05 .card-list {
-    position: absolute;
-    top: 0;
-    left: 30px; }
-    .card-style-05 .card-list a {
-      margin-right: 4px;
-      margin-bottom: 4px;
-      display: inline-block;
-      font-size: 14px;
-      color: #ffffff;
-      background: #e74860;
-      padding: 4px 20px; }
-      .card-style-05 .card-list a:hover, .card-style-05 .card-list a:active, .card-style-05 .card-list a:focus {
-        background: #18455d; }
-  .card-style-05 .blog-img img {
-    transition: all 0.3s ease-in-out; }
-  .card-style-05:hover .blog-img img {
-    transform: scale(1.1); }
-
 /*video-btn*/
 .faq-video {
     position: absolute;
@@ -818,8 +773,6 @@
     margin-left: 22px;
     padding: 19px 23px 19px;}
 }
-
-
 
 /*.about-style-05*/
 .about-video {
