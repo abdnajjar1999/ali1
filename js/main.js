@@ -376,12 +376,25 @@
             dots: true,
             margin: 0,
             nav: false,
-            navText: ["<span class='fas fa-chevron-left'></span>", "<span class='fas fa-chevron-right'></span>"],
-            autoplay: false,
+            autoplay: true,
             smartSpeed:1500,
             mouseDrag:false,
             animateIn: 'fadeIn',
-            animateOut: 'fadeOut'
+            animateOut: 'fadeOut',
+            responsive: {
+                0: {
+                    items: 1,
+                    dots: false
+                },
+                576: {
+                    items: 1,
+                    dots: false
+                },
+                768: {
+                    items: 1,
+                    dots: true
+                },
+            }
         });
         
         // Default owlCarousel
@@ -398,13 +411,11 @@
         var owl = $('.slider-fade1');
         owl.on('changed.owl.carousel', function(event) {
             var item = event.item.index - 2;     // Position of the current item
-            $('span').removeClass('animated fadeInUp');
-            $('h1').removeClass('animated fadeInUp');
             $('p').removeClass('animated fadeInUp');
+            $('h1').removeClass('animated fadeInUp');
             $('a').removeClass('animated fadeInUp');
-            $('.owl-item').not('.cloned').eq(item).find('span').addClass('animated fadeInUp');
-            $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animated fadeInUp');
             $('.owl-item').not('.cloned').eq(item).find('p').addClass('animated fadeInUp');
+            $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animated fadeInUp');
             $('.owl-item').not('.cloned').eq(item).find('a').addClass('animated fadeInUp');
         });
 
