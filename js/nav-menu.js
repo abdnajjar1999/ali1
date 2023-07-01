@@ -1,9 +1,9 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Solutic - IT Solutions and Services HTML Template
-    Description: IT Solutions and Services HTML Template
-    Author: Website Design Templates
-    Version: 2.0
+    Theme Name: Spiral - Web Design Agency HTML Template
+    Description: Web Design Agency HTML Template
+    Author: Chitrakoot Web
+    Version: 1.0
 
     ---------------------------------- */
     
