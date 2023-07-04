@@ -1176,6 +1176,84 @@ a {
   }
 }
 
+/* card-style03 */
+.card-style03 {
+  position: relative;
+  transition: all 0.5s;
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid $PrimaryColor;
+  height: 100%;
+
+  .card-img {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+  }
+
+  .card-icons .show{
+    display: none;
+  }
+
+  .card-icons img {
+    width: 57px;
+  }
+
+  &:hover .card-img {
+    opacity: 1;
+  }
+
+  .card-body {
+    transition: all 0.5s;
+    padding: 28px 40px 40px 40px;
+    position: relative;
+    z-index: 9;
+  }
+
+  h3 a{
+  font-weight: 800;
+
+  &:hover, &:active, &:focus {
+    color: $PrimaryColor;
+  }
+
+  }
+
+  a {
+    font-weight: 700;
+  }
+
+  &:hover, &:active, &:focus {
+    h3, p {
+      color: #fff;
+    }
+
+    .card-icons .show{
+      display: block;
+    }
+
+    .card-icons .hide{
+      display: none;
+    }
+
+    
+
+    a {
+      color: #fff;
+
+      &:hover, &:active, &:focus {
+        color: $PrimaryColor;
+    }
+
+    }
+  }
+}
+
 /*==============================
  *    Video
  *    ================================ */
@@ -1924,44 +2002,32 @@ h2.resp-accordion.resp-tab-active {
 /* blog-sidebar */
 .blog-sidebar {
   .widget {
-    margin-bottom: 30px;
     padding: 30px 25px;
     border-radius: 10px;
     position: relative;
     display: block;
 
     .widget-content {
-      box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
       position: relative;
-      padding: 30px;
     }
 
     .category-list li {
-      margin-bottom: 15px;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 14px 20px 14px 28px;
+      margin-bottom: 0.5rem;
 
       &:last-child {
         margin-bottom: 0px;
       }
 
       a {
-        color: #ffffff;
-        transition: all 0.3s ease-in-out;
-        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 14px 20px 14px 28px;
+        padding: 15px 20px 15px 30px;
+        border-radius: 10px;
         position: relative;
-
-        &:before {
-          width: 20px;
-          height: 20px;
-          background: $PrimaryColor;
-          z-index: 1;
-          border-radius: 50%;
-          content: '';
-          position: absolute;
-          top: 3px;
-          left: -8px;
-        }
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
 
         span {
           z-index: 9;
@@ -1969,13 +2035,18 @@ h2.resp-accordion.resp-tab-active {
         }
 
         &:after {
-          content: '\f061';
-          font-family: "Font Awesome 6 Free";
+          content: "\e649";
+          font-family: 'themify';
           font-size: 12px;
           font-weight: bold;
           margin-left: -10px;
-          opacity: 0;
         }
+
+         &:hover,&:active,&:focus {
+          background: rgba(255, 255, 255, 1);
+          color: $SecondaryColor;
+         }
+
       }
 
       &.active a:after, &:hover a:after {
@@ -2004,6 +2075,23 @@ h2.resp-accordion.resp-tab-active {
   }
 }
 
+.blog-tags a {
+  background-color: $PrimaryColor;
+  padding: 7px 12px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0.6rem 5px 0 0;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid $PrimaryColor;
+
+  &:hover, &:active, &:focus {
+    background-color: #fff;
+    color: $PrimaryColor;
+  }
+}
+
 .comment-reply-link {
   color: $SecondaryColor;
   background: rgba($SecondaryRgbColor, 0.1);
@@ -2018,11 +2106,6 @@ h2.resp-accordion.resp-tab-active {
   }
 }
 
-@media screen and (max-width: $mobile-sm-screen) {
-  .widget-content {
-    padding: 20px;
-  }
-}
 
 /*blog-style-01*/
 .blog-style-01 {
@@ -3662,17 +3745,7 @@ h2.resp-accordion.resp-tab-active {
     background-color: $SecondaryColor;
   }
 
-  .cntc-info-title:before {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 2px;
-    background-color: #cd0d14;
-    top: 18px;
-    left: 12px;
-  }
-
-  .contact-infor {
+  .contact-info {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1215686275);
     padding: 0 0 25px;
     margin-bottom: 22px;
@@ -3703,10 +3776,10 @@ h2.resp-accordion.resp-tab-active {
     margin-top: 5px;
   }
 
-  .contact-infor {
+  .contact-info {
     &:hover .contacts-icon {
       transform: rotateY(180deg);
-      background: #cd0d14;
+      background: $PrimaryColor;
     }
 
     &.upper2 {
@@ -3730,7 +3803,7 @@ h2.resp-accordion.resp-tab-active {
   }
 
   .follow-company-icon2 a:hover {
-    background: #cd0d14;
+    background: $PrimaryColor;
   }
 }
 
@@ -3749,7 +3822,7 @@ h2.resp-accordion.resp-tab-active {
   .contact-us {
     padding: 30px 19px 31px 19px;
 
-    .contact-infor {
+    .contact-info {
       padding: 0 0 18px;
       margin-bottom: 21px;
     }

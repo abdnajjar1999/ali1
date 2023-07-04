@@ -788,6 +788,51 @@ a:hover, a:active {
   .card-style02 .card-item {
     min-height: 340px;
     height: 100%; } }
+/* card-style03 */
+.card-style03 {
+  position: relative;
+  transition: all 0.5s;
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid #ff497c;
+  height: 100%; }
+  .card-style03 .card-img {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s; }
+  .card-style03 .card-icons .show {
+    display: none; }
+  .card-style03 .card-icons img {
+    width: 57px; }
+  .card-style03:hover .card-img {
+    opacity: 1; }
+  .card-style03 .card-body {
+    transition: all 0.5s;
+    padding: 28px 40px 40px 40px;
+    position: relative;
+    z-index: 9; }
+  .card-style03 h3 a {
+    font-weight: 800; }
+    .card-style03 h3 a:hover, .card-style03 h3 a:active, .card-style03 h3 a:focus {
+      color: #ff497c; }
+  .card-style03 a {
+    font-weight: 700; }
+  .card-style03:hover h3, .card-style03:hover p, .card-style03:active h3, .card-style03:active p, .card-style03:focus h3, .card-style03:focus p {
+    color: #fff; }
+  .card-style03:hover .card-icons .show, .card-style03:active .card-icons .show, .card-style03:focus .card-icons .show {
+    display: block; }
+  .card-style03:hover .card-icons .hide, .card-style03:active .card-icons .hide, .card-style03:focus .card-icons .hide {
+    display: none; }
+  .card-style03:hover a, .card-style03:active a, .card-style03:focus a {
+    color: #fff; }
+    .card-style03:hover a:hover, .card-style03:hover a:active, .card-style03:hover a:focus, .card-style03:active a:hover, .card-style03:active a:active, .card-style03:active a:focus, .card-style03:focus a:hover, .card-style03:focus a:active, .card-style03:focus a:focus {
+      color: #ff497c; }
+
 /*==============================
  *    Video
  *    ================================ */
@@ -1341,46 +1386,38 @@ h2.resp-accordion.resp-tab-active {
  *    ================================ */
 /* blog-sidebar */
 .blog-sidebar .widget {
-  margin-bottom: 30px;
   padding: 30px 25px;
   border-radius: 10px;
   position: relative;
   display: block; }
   .blog-sidebar .widget .widget-content {
-    box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
-    position: relative;
-    padding: 30px; }
+    position: relative; }
   .blog-sidebar .widget .category-list li {
-    margin-bottom: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 14px 20px 14px 28px; }
+    margin-bottom: 0.5rem; }
     .blog-sidebar .widget .category-list li:last-child {
       margin-bottom: 0px; }
     .blog-sidebar .widget .category-list li a {
-      color: #ffffff;
-      transition: all 0.3s ease-in-out;
-      display: inline-block;
-      position: relative; }
-      .blog-sidebar .widget .category-list li a:before {
-        width: 20px;
-        height: 20px;
-        background: #ff497c;
-        z-index: 1;
-        border-radius: 50%;
-        content: '';
-        position: absolute;
-        top: 3px;
-        left: -8px; }
+      background: rgba(255, 255, 255, 0.1);
+      padding: 14px 20px 14px 28px;
+      padding: 15px 20px 15px 30px;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff; }
       .blog-sidebar .widget .category-list li a span {
         z-index: 9;
         position: relative; }
       .blog-sidebar .widget .category-list li a:after {
-        content: '\f061';
-        font-family: "Font Awesome 6 Free";
+        content: "\e649";
+        font-family: 'themify';
         font-size: 12px;
         font-weight: bold;
-        margin-left: -10px;
-        opacity: 0; }
+        margin-left: -10px; }
+      .blog-sidebar .widget .category-list li a:hover, .blog-sidebar .widget .category-list li a:active, .blog-sidebar .widget .category-list li a:focus {
+        background: white;
+        color: #1f2732; }
     .blog-sidebar .widget .category-list li.active a:after, .blog-sidebar .widget .category-list li:hover a:after {
       margin-left: 10px;
       opacity: 1;
@@ -1399,6 +1436,20 @@ h2.resp-accordion.resp-tab-active {
     background-color: #fff;
     color: #ff497c; }
 
+.blog-tags a {
+  background-color: #ff497c;
+  padding: 7px 12px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0.6rem 5px 0 0;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid #ff497c; }
+  .blog-tags a:hover, .blog-tags a:active, .blog-tags a:focus {
+    background-color: #fff;
+    color: #ff497c; }
+
 .comment-reply-link {
   color: #1f2732;
   background: rgba(31, 39, 50, 0.1);
@@ -1410,9 +1461,6 @@ h2.resp-accordion.resp-tab-active {
     color: #fff;
     background: #1f2732; }
 
-@media screen and (max-width: 575px) {
-  .widget-content {
-    padding: 20px; } }
 /*blog-style-01*/
 .blog-style-01 {
   position: relative;
@@ -2577,15 +2625,7 @@ h2.resp-accordion.resp-tab-active {
     border-radius: 5px;
     margin-left: 20px;
     background-color: #1f2732; }
-  .contact-us .cntc-info-title:before {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 2px;
-    background-color: #cd0d14;
-    top: 18px;
-    left: 12px; }
-  .contact-us .contact-infor {
+  .contact-us .contact-info {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1215686275);
     padding: 0 0 25px;
     margin-bottom: 22px; }
@@ -2608,10 +2648,10 @@ h2.resp-accordion.resp-tab-active {
     line-height: 23px;
     opacity: .702;
     margin-top: 5px; }
-  .contact-us .contact-infor:hover .contacts-icon {
+  .contact-us .contact-info:hover .contacts-icon {
     transform: rotateY(180deg);
-    background: #cd0d14; }
-  .contact-us .contact-infor.upper2 {
+    background: #ff497c; }
+  .contact-us .contact-info.upper2 {
     border-bottom: none;
     margin-bottom: 0px; }
   .contact-us .contact-details .follow-company-icon2 a {
@@ -2627,7 +2667,7 @@ h2.resp-accordion.resp-tab-active {
     background-color: rgba(255, 255, 255, 0.2);
     text-align: center; }
   .contact-us .follow-company-icon2 a:hover {
-    background: #cd0d14; }
+    background: #ff497c; }
 
 @media screen and (max-width: 1199px) {
   .contact-us {
@@ -2638,7 +2678,7 @@ h2.resp-accordion.resp-tab-active {
 @media screen and (max-width: 575px) {
   .contact-us {
     padding: 30px 19px 31px 19px; }
-    .contact-us .contact-infor {
+    .contact-us .contact-info {
       padding: 0 0 18px;
       margin-bottom: 21px; }
     .contact-us .contacts-icon {
