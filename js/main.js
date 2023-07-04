@@ -435,7 +435,7 @@
 
         // CountDown for coming soon page
         $(".countdown").countdown({
-            date: "01 Aug 2025 00:01:00", //set your date and time. EX: 15 May 2025 12:00:00
+            date: "01 Mar 2026 00:01:00", //set your date and time. EX: 15 May 2025 12:00:00
             format: "on"
         });
 

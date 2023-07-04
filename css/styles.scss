@@ -142,10 +142,6 @@ a {
   background: $SecondaryColor;
 }
 
-.dark-overlay[data-overlay-dark]:before {
-  background: #1f2732;
-}
-
 .text-primary, .text-primary-hover:hover {
   color: $PrimaryColor !important;
 }
@@ -212,9 +208,9 @@ a {
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
     background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.3)));
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
-    -webkit-transform: skewX(-25deg);
-    -ms-transform: skewX(-25deg);
-    transform: skewX(-25deg);
+    -webkit-transform: skewX(0);
+    -ms-transform: skewX(0);
+    transform: skewX(0);
   }
 
   &:hover:before {
@@ -352,6 +348,17 @@ a {
     &:before {
       border-color: $PrimaryColor;
     }
+  }
+
+  &.white-hover:hover, &.white-hover:active, &.white-hover:focus {
+    background: #fff;
+    transition: all 0.4s ease-in-out 0s;
+
+    span{
+      color: $SecondaryColor;
+       transition: all 0.4s ease-in-out 0s;
+    }
+
   }
 
   &.white-border:before {
@@ -930,11 +937,15 @@ a {
 /* card-style-01 */
 .card-style-01 {
   position: relative;
-  border-radius: 10px;
+  border-radius: 0;
   background: #fff;
   overflow: hidden;
   border: none;
+  border-bottom: 3px solid transparent;
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  height: 100%;
 
   .card-price {
     background-color: #001736;
@@ -985,10 +996,7 @@ a {
     -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
     box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
     border-bottom: 3px solid $PrimaryColor;
-    transform: perspective($desk-lg-screen) rotateX(0deg) translateY(-10px);
   }
-
-  transition: all 1000ms ease 300ms;
 
   .pricing-top {
     position: absolute;
@@ -1853,8 +1861,9 @@ h2.resp-accordion.resp-tab-active {
       background-color: #fff;
     }
 
-    &:hover {
+    &:hover, &:active, &:focus {
       text-decoration: none;
+      color: $PrimaryColor;
     }
 
     &.collapsed:after {
@@ -2264,7 +2273,7 @@ h2.resp-accordion.resp-tab-active {
     background: $PrimaryColor;
     display: inline-block;
     text-align: center;
-    min-width: 140px;
+    min-width: 107px;
     overflow: hidden;
     margin-right: 10px;
     padding: 15px 10px;
@@ -2300,11 +2309,17 @@ h2.resp-accordion.resp-tab-active {
 
 @media screen and (max-width: $desk-md-screen) {
   .countdown li {
-    min-width: 120px;
+    min-width: 103px;
 
     span {
       font-size: 34px;
     }
+  }
+}
+
+@media screen and (max-width: $desk-xs-screen) {
+  .countdown li {
+    min-width: 100px;
   }
 }
 
@@ -2823,9 +2838,14 @@ h2.resp-accordion.resp-tab-active {
 
 /*team-style01*/
 .team-style01 {
+  
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+
   &:hover {
     background-color: #ffffff;
-    box-shadow: 12px 9px 38px 12px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
   }
 
   .team-icon {
