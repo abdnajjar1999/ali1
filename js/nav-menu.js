@@ -1,12 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: Spiral - Web Design Agency HTML Template
-    Description: Web Design Agency HTML Template
-    Author: Chitrakoot Web
-    Version: 1.0
-
-    ---------------------------------- */
-    
 (function ($) {
     "use strict";
     $.fn.menumaker = function (options) {

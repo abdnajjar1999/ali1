@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Spiral - Web Design Agency HTML Template
-    Description: Web Design Agency HTML Template
+    Theme Name: Crypto - Bitcoin & Cryptocurrency HTML Template
+    Description: Bitcoin & Cryptocurrency HTML Template
     Author: Chitrakoot Web
     Version: 1.0
 
@@ -23,7 +23,7 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 .navbar-nav li{ list-style: none; -webkit-transition: background .3s ease; -ms-transition: background .3s ease; transition: background .3s ease; }
 .navbar-nav li.has-sub > a{ position: relative; }
 .navbar-nav li.has-sub a:hover{ color: #fff; }
-.navbar-nav li a{ display: block; color: #9d9d9d; font-size: 16px; font-weight: 600; padding: 8px 42px 8px 32px; }
+.navbar-nav li a{ display: block; color: #9d9d9d; font-size: 16px; font-weight: 700; padding: 8px 42px 8px 32px; }
 .navbar-nav > li{ margin-left: 10px; float: left; text-align: center; }
 .navbar-nav > li.has-sub{ padding-right: 13px; }
 .navbar-nav > li > a{ position: relative; display: block; font-size: 15px; font-weight: 700; padding: 21px 0.5rem; color: #282b2d; letter-spacing: 0.8px; text-transform: uppercase; -webkit-transition-duration: 500ms; -o-transition-duration: 500ms; transition-duration: 500ms; }
@@ -37,7 +37,7 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 .navbar ul ul li{ -webkit-transition: all .25s ease; -ms-transition: all .25s ease; transition: all .25s ease; }
 .navbar ul ul li:last-child{ margin-bottom: 0; }
 .navbar ul ul li.active > a{ /*color: #fff;*/ }
-.navbar-nav li > ul{ padding: 15px 0; margin: 0 0 0 10px; background: #282b2d; min-width: 225px; -webkit-box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); -ms-box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); -moz-box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); }
+.navbar-nav li > ul{ padding: 15px 0; margin: 0 0 0 10px; border-radius: 0.25rem; background: #282b2d; min-width: 225px; -webkit-box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); -ms-box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); -moz-box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); box-shadow: 9px 11px 29px rgba(125, 138, 152, 0.15); }
 .navbar-nav li:hover > ul{ left: auto; }
 
 .navbar-nav > li.has-sub > ul{ text-align: left; opacity: 0; margin-top: 10px; -webkit-transition: all .5s ease; -ms-transition: all .5s ease; -moz-transition: all .5s ease; -o-transition: all .5s ease; transition: all .5s ease; }
@@ -69,8 +69,8 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 /* top search */
 .top-search.white { background: #fff; }
 .top-search.white input.form-control{ color: #282b2d; }
-.top-search.white input.form-control::placeholder{ color: #1f2732; opacity: 1; }
-.top-search.white input.form-control::-ms-input-placeholder { color: #1f2732; }
+.top-search.white input.form-control::placeholder{ color: #001c41; opacity: 1; }
+.top-search.white input.form-control::-ms-input-placeholder { color: #001c41; }
 .top-search.white .input-group-addon{ color: #282b2d; }
 
 /* Responsive CSS */
@@ -80,7 +80,7 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 		Default Header style
 	====================================== */
 
-	header.scrollHeader .navbar-default{ position: fixed; top: 0; z-index: 99; width: 100%; background: #fff; left: 0; transition: all 0.2s ease 0s;  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); animation: .95s ease 0s normal forwards 1 running headerAnimate; }
+	header.scrollHeader .navbar-default{ position: fixed; top: 0; z-index: 99; width: 100%; background: #fff; left: 0; transition: all 0.2s ease 0s;  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; animation: .95s ease 0s normal forwards 1 running headerAnimate; }
 	@keyframes headerAnimate { 0% { margin-top: -150px; } 100% { margin-top: -1px; } }
 	.wrapper-boxed .scrollHeader .navbar-default{ left: 0; margin: 0 auto; max-width: 1200px; right: 0; }
 	.scrollHeader .navbar-brand img{ transition-duration: 0.5s; }
@@ -137,13 +137,13 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 	    Header style02
 	====================================== */
 	.header-style2 .navbar-default { box-shadow: none; }
-	.header-style2 .navbar-nav li a { color: #1f2732; }
+	.header-style2 .navbar-nav li a { color: #001c41; }
 	.header-style2 .navbar-nav > li > a { color: #20252d; }
 	.header-style2 .navbar-nav li > ul { background: #fff; }
 	.header-style2 .navbar ul ul li.active > a { color: #20252d; }
 	.header-style2 .navbar-nav li.has-sub a:hover{ color: #20252d; }
 	.header-style2 .navbar-nav li.current > a{ color: #229f72; }
-	.header-style2 .navbar .sub-title { color: #1f2732; font-weight: 800; }
+	.header-style2 .navbar .sub-title { color: #001c41; font-weight: 800; }
 	.header-style2 .navbar-nav > li.has-sub > a:hover{ color: #000; }
 	.header-style2 .navbar > ul > li.has-sub > a:hover:after{ border-color: transparent #000 #000 transparent; }
 	.header-style2 .navbar > ul > li.has-sub > a:after{  border-color: transparent #000 #000 transparent; }
@@ -159,7 +159,7 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 	/* ===================================
 		Menu area light
 	====================================== */
-	.menu_area-light .navbar-nav li a { color: #1f2732; }
+	.menu_area-light .navbar-nav li a { color: #001c41; }
 	.menu_area-light .navbar-nav > li > a { color: #fff; }
 	.menu_area-light .navbar-nav li > ul { background: #fff; }
 	.menu_area-light .navbar ul ul li.active > a { color: #282b2d; }
@@ -217,7 +217,7 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 	.navbar ul li a{ width: 100%; border-bottom: 0;  }
 	.navbar ul ul{ position: relative; left: 0; width: 100%; margin: 0; text-align: left; background: #f5f5f5; padding: 0;  }
 	.navbar ul ul li{ margin-bottom: 0; padding: 0; border-color: #e6e6e6;  }
-	.navbar ul ul li a{ width: 100%; border-bottom: 0; color: #1f2732; background: none; padding: 10px 35px 10px 30px;  }
+	.navbar ul ul li a{ width: 100%; border-bottom: 0; color: #001c41; background: none; padding: 10px 35px 10px 30px;  }
 	.navbar ul ul ul li a{ padding-left: 45px;  }
 	.navbar > ul > li{ float: none;  }
 	.navbar-nav ul ul{ position: relative; left: 0; width: 100%; margin: 0; text-align: left; background: #f5f5f5; padding: 0;  }
