@@ -643,7 +643,7 @@ button:hover, button:active {
   width: 100%;
   background: transparent;
   z-index: 9999;
-  min-height: 70px;
+  min-height: 80px;
   padding: 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .onepage-nav .logo {
