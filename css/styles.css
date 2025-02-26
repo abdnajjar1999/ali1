@@ -3752,7 +3752,7 @@ h2.resp-tab-active span.resp-arrow {
     background: #fafafa;
     border-radius: 10px; }
   .pricing-wrapper .pricing-title {
-    background: #f9b707;
+    /* background: #f9b707; */
     height: 100px;
     width: 100px;
     margin: 0 auto;
