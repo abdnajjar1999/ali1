@@ -213,7 +213,7 @@
                 <div class="row">
                     <div class="col-lg-6 mb-2-2 mb-lg-0">
                         <div class="p-1-9 p-sm-2-2 p-lg-2-5 bg-light-secondary border-radius-5">
-                            <form class="quform" action="quform/contact.php" method="post" enctype="multipart/form-data" onclick="">
+                            <form id="emailForm" class="quform" action="quform/contact.php" method="post" enctype="multipart/form-data">
                                 <div class="quform-elements">
                                     <div class="row">
 
@@ -221,22 +221,22 @@
                                         <div class="col-md-6">
                                             <div class="quform-element">
                                                 <div class="quform-input">
-                                                    <input class="form-control border-radius-5" id="name" type="text" name="name" placeholder="Your name here">
+                                                    <input class="form-control border-radius-5" id="name" type="text" name="name" placeholder="Your name here" required>
                                                 </div>
                                             </div>
 
                                         </div>
                                         <!-- End Text input element -->
 
-                                        <!-- Begin Text input element -->
+                                        <!-- Begin Email input element -->
                                         <div class="col-md-6">
                                             <div class="quform-element">
                                                 <div class="quform-input">
-                                                    <input class="form-control border-radius-5" id="email" type="text" name="email" placeholder="Your email here">
+                                                    <input class="form-control border-radius-5" id="email" type="email" name="email" placeholder="Your email here" required>
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- End Text input element -->
+                                        <!-- End Email input element -->
 
                                         <!-- Begin Text input element -->
                                         <div class="col-md-6">
@@ -461,7 +461,7 @@
                             <h3 class="h5 mb-4">Services</h3>
                             <ul class="footer-list-style1">
                                 <li><a href="bitcoin-exchange.html">Bitcoin Exchange</a></li>
-                                <li><a href="bitcoin-atm-kiosks.html">BitCoin ATM’s & Kiosks</a></li>
+                                <li><a href="bitcoin-atm-kiosks.html">BitCoin ATM's & Kiosks</a></li>
                                 <li><a href="payment-integration.html">Payment Integration</a></li>
                                 <li><a href="research-and-development.html">Research & Development</a></li>
                                 <li><a href="secure-wallet.html">Secure Wallet</a></li>
@@ -581,6 +581,25 @@
     <script src="quform/js/scripts.js"></script>
 
     <!-- all js include end -->
+
+    <script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // الحصول على القيم من النموذج
+        const name = document.getElementById('name').value;
+        const message = document.getElementById('message').value;
+        
+        // إنشاء رابط Gmail مع البريد الإلكتروني المحدد
+        const toEmail = 'abdalrahmannajjar655@gmail.com';
+        const subject = encodeURIComponent('رسالة جديدة من ' + name);
+        const body = encodeURIComponent(message);
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${toEmail}&su=${subject}&body=${body}`;
+        
+        // فتح نافذة Gmail جديدة
+        window.open(gmailUrl, '_blank');
+    });
+    </script>
 
 </body>
 

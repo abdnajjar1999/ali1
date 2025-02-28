@@ -1,4 +1,10 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
 /**
  * Enable debug mode. Quform will try to display any fatal PHP errors or exceptions at
@@ -359,13 +365,13 @@ function process(Quform $form, array &$config)
 
             if ($config['email']) {
                 // Get a new PHPMailer instance
-                $mailer = Quform::newPHPMailer($config['smtp']);
+                $mail = new PHPMailer(true);
 
                 // Set the from information
                 $from = $form->parseEmailRecipient($config['from']);
 
                 if ($from['email']) {
-                    $mailer->setFrom($from['email'], $from['name']);
+                    $mail->setFrom($from['email'], $from['name']);
                 }
 
                 // Set the Reply-To header of the email as the submitted email address from the form
@@ -373,12 +379,12 @@ function process(Quform $form, array &$config)
                     $replyTo = $form->parseEmailRecipient($config['replyTo']);
 
                     if ($replyTo['email']) {
-                        $mailer->addReplyTo($replyTo['email'], $replyTo['name']);
+                        $mail->addReplyTo($replyTo['email'], $replyTo['name']);
                     }
                 }
 
                 // Set the subject
-                $mailer->Subject = $form->replacePlaceholderValues($config['subject']);
+                $mail->Subject = $form->replacePlaceholderValues($config['subject']);
 
                 if (empty($config['recipients'])) {
                     die("You haven't entered a recipient email address in the form process file.\n\n" . __FILE__);
@@ -386,22 +392,22 @@ function process(Quform $form, array &$config)
 
                 // Set the recipients
                 foreach ((array) $config['recipients'] as $recipient) {
-                    $mailer->addAddress($recipient);
+                    $mail->addAddress($recipient);
                 }
 
                 // Set the email body
                 ob_start();
                 include QUFORM_ROOT . $config['emailBody'];
-                $mailer->msgHTML(ob_get_clean());
-                $mailer->AltBody = 'To view this email please use HTML compatible email software.';
+                $mail->msgHTML(ob_get_clean());
+                $mail->AltBody = 'To view this email please use HTML compatible email software.';
 
                 // Add any attachments
                 foreach ($attachments as $attachment) {
-                    $mailer->addAttachment($attachment['path'], $attachment['filename'], 'base64', $attachment['type']);
+                    $mail->addAttachment($attachment['path'], $attachment['filename'], 'base64', $attachment['type']);
                 }
 
                 // Send the notification message
-                $mailer->send();
+                $mail->send();
             }
 
             // Autoreply email
@@ -410,29 +416,29 @@ function process(Quform $form, array &$config)
 
                 if ($autoreplyRecipient['email']) {
                     // Create the autoreply message
-                    $mailer = Quform::newPHPMailer($config['smtp']);
+                    $mail = new PHPMailer(true);
 
                     // Set the from address
                     $autoreplyFrom = $form->parseEmailRecipient($config['autoreplyFrom']);
 
                     if ($autoreplyFrom['email']) {
-                        $mailer->setFrom($autoreplyFrom['email'], $autoreplyFrom['name']);
+                        $mail->setFrom($autoreplyFrom['email'], $autoreplyFrom['name']);
                     }
 
                     // Set the recipient
-                    $mailer->addAddress($autoreplyRecipient['email'], $autoreplyRecipient['name']);
+                    $mail->addAddress($autoreplyRecipient['email'], $autoreplyRecipient['name']);
 
                     // Set the subject
-                    $mailer->Subject = $form->replacePlaceholderValues($config['autoreplySubject']);
+                    $mail->Subject = $form->replacePlaceholderValues($config['autoreplySubject']);
 
                     // Set the autoreply email body
                     ob_start();
                     include QUFORM_ROOT . $config['autoreplyBody'];
-                    $mailer->msgHTML(ob_get_clean());
-                    $mailer->AltBody = 'To view this email please use HTML compatible email software.';
+                    $mail->msgHTML(ob_get_clean());
+                    $mail->AltBody = 'To view this email please use HTML compatible email software.';
 
                     // Send the autoreply
-                    $mailer->send();
+                    $mail->send();
                 }
             }
 
