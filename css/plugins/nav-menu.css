@@ -11,13 +11,13 @@
 	Default Header style
 ====================================== */
 
-header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
+header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; background: transparent !important; }
 
 .navbar-brand img{ max-height: 53px; transition-duration: 0.5s; }
 .navbar-header-custom{ padding: 17px 0 15px 0; }
-.navbar-default{ transition: all 0.5s ease 0s; -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+.navbar-default{ transition: all 0.5s ease 0s; background: transparent !important; -webkit-box-shadow: none; -ms-box-shadow: none; box-shadow: none; }
 .navbar-default .container, .navbar-default .container-fluid{ position: relative; }
-.menu_area{ position: relative; z-index: 2; }
+.menu_area{ position: relative; z-index: 2; background: transparent !important; }
 .menu_area .navbar-brand{ transition: all 0.5s ease 0s; display: inline-block; }
 
 .navbar-nav li{ list-style: none; -webkit-transition: background .3s ease; -ms-transition: background .3s ease; transition: background .3s ease; }
@@ -80,7 +80,7 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 		Default Header style
 	====================================== */
 
-	header.scrollHeader .navbar-default{ position: fixed; top: 0; z-index: 99; width: 100%; background: #fff; left: 0; transition: all 0.2s ease 0s;  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; animation: .95s ease 0s normal forwards 1 running headerAnimate; }
+	header.scrollHeader .navbar-default{ position: fixed; top: 0; z-index: 99; width: 100%; background: rgba(255, 255, 255, 0.95) !important; backdrop-filter: blur(10px); left: 0; transition: all 0.2s ease 0s;  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) !important; animation: .95s ease 0s normal forwards 1 running headerAnimate; }
 	@keyframes headerAnimate { 0% { margin-top: -150px; } 100% { margin-top: -1px; } }
 	.wrapper-boxed .scrollHeader .navbar-default{ left: 0; margin: 0 auto; max-width: 1200px; right: 0; }
 	.scrollHeader .navbar-brand img{ transition-duration: 0.5s; }
@@ -177,6 +177,10 @@ header{ transition: all 0.5s ease 0s; position: relative; z-index: 99999; }
 	.menu_area-light.scrollHeader .navbar-nav li.current > a{ color: #229f72; }
 	.menu_area-light.scrollHeader .navbar-nav li.current > a:hover{ color: #229f72; }
 	.menu_area-light.scrollHeader .navbar > ul > li.current > a:after{ border-color: transparent #229f72 #229f72 transparent; }
+
+	header.scrollHeader .menu_area {
+		background: transparent !important;
+	}
 
 }
 

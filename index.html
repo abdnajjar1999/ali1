@@ -53,8 +53,8 @@
         ================================================== -->
 
         <!-- Replace with this navigation code -->
-        <header class="header-style1 menu_area-light">
-            <div class="navbar-default border-bottom border-color-light-white">
+        <header class="header-style1">
+            <div class="navbar-default border-bottom border-color-light-white" style="background: transparent !important; backdrop-filter: none !important;">
                 <!-- start top search -->
                 <div class="top-search bg-primary">
                     <div class="container">
@@ -74,15 +74,15 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-12 col-lg-12">
-                            <div class="menu_area alt-font">
-                                <nav class="navbar navbar-expand-lg navbar-light p-0">
-                                    <div class="navbar-header navbar-header-custom">
+                            <div class="menu_area alt-font" style="background: transparent !important; backdrop-filter: none !important;">
+                                <nav class="navbar navbar-expand-lg navbar-light p-0" style="background: transparent !important; backdrop-filter: none !important;">
+                                    <div class="navbar-header navbar-header-custom" style="background: transparent !important;">
                                         <!-- start logo -->
                                         <a href="index.html" class="navbar-brand"><img id="logo" src="img/logos/logo-inner.png" alt="logo"></a>
                                         <!-- end logo -->
                                     </div>
 
-                                    <div class="navbar-toggler bg-primary"></div>
+                                    <div class="navbar-toggler"></div>
 
                                     <!-- start menu area -->
                                     <ul class="navbar-nav ms-auto" id="nav" style="display: none;">
@@ -478,7 +478,7 @@
                                 <div class="col-md-7 mb-2-2 mb-md-0">
                                     <ul class="countdown custom-countdown mb-2-5">
                                         <!-- days -->
-                                        <li class="first"><span class="days">850</span>
+                                        <li class="first"><span class="days">920</span>
                                             <p class="timeRefDays">days</p>
                                         </li>
                                         <!-- end days -->
@@ -782,8 +782,8 @@
                                 </div>
                             </div>
                             <div class="card-body text-center p-xxl-4">
-                                <h4 class="text-white">Scott Freeman</h4>
-                                <span class="text-gray">Bitcoin Trader</span>
+                                <h4 class="text-white">ALI HASAN</h4>
+                                <span class="text-gray">CEO and Co-Founder of Atheel Coin</span>
                             </div>
                         </div>
                     </div>
@@ -801,15 +801,15 @@
                                 </div>
                             </div>
                             <div class="card-body text-center p-xxl-4">
-                                <h4 class="text-white">Paige Gauvin</h4>
-                                <span class="text-gray">Co-Founder</span>
+                                <h4 class="text-white">SAED MAJDALAWI</h4>
+                                <span class="text-gray">Officer CO-FOUNDER &amp; CHIEF TECHNICAL OFFICER</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mt-4">
                         <div class="card card-style5 border-0">
                             <div class="position-relative overflow-hidden">
-                                <img src="img/team/team-07.jpg" class="rounded" alt="...">
+                                <img src="img/team/3.jpeg" class="rounded" alt="...">
                                 <div class="social-icon">
                                     <ul class="list-unstyled p-0 m-0">
                                         <li><a href="#!"><i class="ti-facebook"></i></a></li>
@@ -820,15 +820,15 @@
                                 </div>
                             </div>
                             <div class="card-body text-center p-xxl-4">
-                                <h4 class="text-white">Reija Kauppila</h4>
-                                <span class="text-gray">Bitcoin Consultant</span>
+                                <h4 class="text-white">ANDREJ ALAKIN</h4>
+                                <span class="text-gray">BLOCKCHAIN DEVELOPER</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-3 mt-4">
                         <div class="card card-style5 border-0">
                             <div class="position-relative overflow-hidden">
-                                <img src="img/team/team-08.jpg" class="rounded" alt="...">
+                                <img src="img/team/14.jpeg" class="rounded" alt="...">
                                 <div class="social-icon">
                                     <ul class="list-unstyled p-0 m-0">
                                         <li><a href="#!"><i class="ti-facebook"></i></a></li>
@@ -839,8 +839,8 @@
                                 </div>
                             </div>
                             <div class="card-body text-center p-xxl-4">
-                                <h4 class="text-white">Arttu Loiri</h4>
-                                <span class="text-gray">Marketing Specialist</span>
+                                <h4 class="text-white">Thiago Neves</h4>
+                                <span class="text-gray">Manager of &quot;Atheel Coin&quot; for South America</span>
                             </div>
                         </div>
                     </div>
@@ -874,9 +874,9 @@
                                     <div class="quform-element mb-4">
                                         <div class="quform-input">
                                             <select id="cryptocurrency-list" class="form-control form-select" name="cryptocurrency-list">
-                                                <option>Atheel Coin (ATHL)</option>
+                                                <option selected>Atheel Coin (ATHL)</option>
 
-                                                <option selected>Bitcoin (BTC)</option>
+                                                <option >Bitcoin (BTC)</option>
                                                 <option>Bitcoin Gold (BTG)</option>
                                                 <option>Blackcoin (BLK)</option>
                                                 <option>Bitcoin Cash (BCH)</option>
@@ -918,8 +918,10 @@
                                 <!-- Begin Submit button -->
                                 <div class="col-md-12 text-center">
                                     <div class="quform-submit-inner">
-                                        <button class="butn primary-butn border-0" type="submit">Convert Now</button>
+                                        <button class="butn primary-butn border-0" type="button" onclick="performConversion()">Convert Now</button>
                                     </div>
+                                    <!-- إضافة عنصر لعرض النتيجة -->
+                                    <div id="conversionResult" class="mt-3 text-white"></div>
                                 </div>
                                 <!-- End Submit button -->
                             </div>
@@ -1140,9 +1142,10 @@
                         </a>
                         <p class="text-white mb-4">Cryptocurrencies do not have a important issuing or regulating authority, rather the usage of a decentralized gadget to report transactions and problem new units.</p>
                         <ul class="contact-list white">
-                            <li><span class="fa fa-home pe-3 text-primary"></span><a href="#!">66 Guild Street 512B, Great Town.</a></li>
-                            <li><span class="fa fa-phone-alt pe-3 text-primary"></span><a href="#!">(+44) 123 456 789</a></li>
-                            <li><span class="fa fa-envelope pe-3 text-primary"></span><a href="#!">info@example.com</a></li>
+                            <li><span class="fa fa-home pe-3 text-primary"></span><a href="#!">UAE, Jumeirah Lake Tower, Mazaya Business Center AA1, floor 36, floor 35
+                            </a></li>
+                            <li><span class="fa fa-phone-alt pe-3 text-primary"></span><a href="#!">+971542205051                            </a></li>
+                            <li><span class="fa fa-envelope pe-3 text-primary"></span><a href="#!"> contact@atheelcoin.com                            </a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-lg-2 mt-2-6">
@@ -1206,19 +1209,6 @@
                 </div>
                 <div class="footer-bar borders-top border-color-light-white">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 text-center text-md-start mt-3 mt-md-0 order-2 order-md-1">
-                                <p class="d-inline-block text-white mb-0 display-30 display-lg-29">&copy; <span class="current-year"></span> Crypto Powered by
-                                    <a href="#!" class="text-primary white-hover">Chitrakoot Web</a>
-                                </p>
-                            </div>
-                            <div class="col-md-6 text-center text-md-end order-1 order-md-2">
-                                <ul class="footer-menus">
-                                    <li><a href="career.html">Career</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li class="last"><a href="faq.html">FAQ</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1317,7 +1307,6 @@
     </div>
     <script src="quform/js/scripts.js"></script>
 
-    <!-- Add this modal code before the closing </body> tag -->
     <div class="modal fade" id="incubatorModal" tabindex="-1" aria-labelledby="incubatorModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -1437,6 +1426,92 @@
                 }
             }
         });
+    });
+    </script>
+
+    <!-- إضافة السكريبت -->
+    <script>
+    function performConversion() {
+        const cryptoAmount = document.getElementById('cryptocurrency-amount');
+        const cryptoSelect = document.getElementById('cryptocurrency-list');
+        const currencySelect = document.getElementById('currency-list');
+        const resultDiv = document.getElementById('conversionResult');
+
+        // التحقق من إدخال قيمة
+        if (!cryptoAmount.value) {
+            resultDiv.innerHTML = '<span class="text-danger">Please enter an amount</span>';
+            return;
+        }
+
+        // معدلات الصرف
+        const exchangeRates = {
+            'USD': 1,
+            'EUR': 0.91,
+            'INR': 83.37,
+            'GBP': 0.79,
+            'JPY': 149.35,
+            'RUB': 92.50
+        };
+
+        // أسعار العملات المشفرة بالدولار
+        const cryptoRates = {
+            'Atheel Coin (ATHL)': 0.20,
+            'Bitcoin (BTC)': 98000,
+            'Bitcoin Gold (BTG)': 20.50,
+            'Blackcoin (BLK)': 0.025,
+            'Bitcoin Cash (BCH)': 230.75,
+            'Bitcoin Plus (XBC)': 7.50,
+            'BitShares (BTS)': 0.01
+        };
+
+        // الحصول على القيم المحددة
+        const amount = parseFloat(cryptoAmount.value);
+        const selectedCrypto = cryptoSelect.value;
+        const selectedCurrency = currencySelect.value;
+        
+        // استخراج رمز العملة
+        const currencyCode = selectedCurrency.split('(')[1].split(')')[0];
+        
+        // حساب التحويل
+        const cryptoRate = cryptoRates[selectedCrypto];
+        const exchangeRate = exchangeRates[currencyCode];
+        const result = amount * cryptoRate * exchangeRate;
+
+        // تنسيق النتيجة
+        const formattedResult = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: currencyCode
+        }).format(result);
+
+        // عرض النتيجة
+        resultDiv.innerHTML = `
+            <div class="bg-light-dark p-3 rounded">
+                <h4 class="mb-2">${amount} ${selectedCrypto}</h4>
+                <h3 class="text-primary mb-0">= ${formattedResult}</h3>
+            </div>
+        `;
+
+        // تحديث حقل العملة
+        document.getElementById('currency-amount').value = result.toFixed(2);
+    }
+
+    // إضافة مستمع للنموذج لمنع إعادة تحميل الصفحة
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        performConversion();
+    });
+
+    // تنظيف نتيجة التحويل عند تغيير القيم
+    document.getElementById('cryptocurrency-amount').addEventListener('input', function() {
+        document.getElementById('conversionResult').innerHTML = '';
+    });
+
+    document.getElementById('cryptocurrency-list').addEventListener('change', function() {
+        document.getElementById('conversionResult').innerHTML = '';
+    });
+
+    document.getElementById('currency-list').addEventListener('change', function() {
+        document.getElementById('conversionResult').innerHTML = '';
     });
     </script>
 
