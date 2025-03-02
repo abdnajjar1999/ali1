@@ -62,11 +62,11 @@ foreach($files as $file){
     <meta name="author" content="Chitrakoot Web" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="Bitcoin & Cryptocurrency HTML Template" />
-    <meta name="description" content="Crypto - Bitcoin & Cryptocurrency HTML Template" />
+    <meta name="keywords" content="Atheel Coin - New Digital cryptocurrency for your future" />
+    <meta name="description" content="ATHEEL COIN - New Digital cryptocurrency for your future" />
 
     <!-- title  -->
-    <title>Crypto - Bitcoin & Cryptocurrency HTML Template</title>
+    <title>ATHEEL COIN</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="../img/logos/favicon.png">

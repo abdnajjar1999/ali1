@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Theme Name: Crypto - Bitcoin & Cryptocurrency HTML Template
+    Theme Name: ATHEEL COIN
     Description: Bitcoin & Cryptocurrency HTML Template
     Author: Chitrakoot Web
     Version: 1.0
